@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.generation.blogpessoal.model.Tema;
-import com.generation.blogpessoal.repository.PostagemRepository;
 import com.generation.blogpessoal.repository.TemaRepository;
 
 @RestController
@@ -31,9 +30,6 @@ public class TemaController {
 
 	@Autowired
 	private TemaRepository temaRepository;
-	
-	@Autowired // da acesso ao meu controller a responsabilidade de criar e instanciar objetos
-	private PostagemRepository postagemRepository;
 
 	@GetMapping
 	public ResponseEntity<List<Tema>> getAll() {
